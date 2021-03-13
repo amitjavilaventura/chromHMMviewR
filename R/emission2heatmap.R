@@ -42,7 +42,7 @@ emission2hm <- function(data = NULL, features = NULL, states = NULL,
   # If data is raw output from chromHMM, use either file or df
   if(is.character(data)){ df <- read.delim(data) }
   else if(is.data.frame(data)) { df <- data }
-  else{ return("'data' should be one of character vector or data frame") }
+  else{ return("'data' should be one of character vector with a file path or data frame") }
 
   # Process data
   df <- df %>% set_colnames(c("State", features)) %>% mutate(State = states) #%>% column_to_rownames("State")

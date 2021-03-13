@@ -2,3 +2,4 @@
 
 export(emission2hm)
 export(enrich2hm)
+export(neighbor2hm)
