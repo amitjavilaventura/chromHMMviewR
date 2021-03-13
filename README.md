@@ -9,4 +9,4 @@ Go to the ChromHMM official website to get more information about it: <http://co
 
 ## To DOs
 
-[ ] Complete all the other functions: see <https://github.com/amitjavilaventura/custom-R-functions/blob/master/chromHMM_functions.R>
+[ ] See why I get an error when the package is loaded or a function is executed.
