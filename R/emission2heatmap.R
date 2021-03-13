@@ -40,10 +40,9 @@ emission2hm <- function(data = NULL, features = NULL, states = NULL,
   if(!is.character(features) | !is.character(states)){ return("Both 'features' and 'states' must be a not-null character vector") }
 
   # If data is raw output from chromHMM, use either file or df
-  # Read data either directly from a file or from a already read df. ChromHMM file (*_emission.txt).
   if(is.character(data)){ df <- read.delim(data) }
   else if(is.data.frame(data)) { df <- data }
-  else{ return("One of 'df', 'file' or 'df_melt' must not be null and the others must.") }
+  else{ return("'data' should be one of character vector or data frame") }
 
   # Process data
   df <- df %>% set_colnames(c("State", features)) %>% mutate(State = states) #%>% column_to_rownames("State")
