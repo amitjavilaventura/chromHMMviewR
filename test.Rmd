@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+author: "Adrià Mitjavila Ventura"
+date: "3/13/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+file <- "other/emissions_4.txt"
+df <- read.delim(file = "other/emissions_4.txt")
+emission2hm(file = file, features = c("ATAC", "bCAT", "TCF4"), states = c("E1","E2", "E3", "E4"))
+
+
+```
