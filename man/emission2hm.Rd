@@ -21,7 +21,9 @@ emission2hm(data, features = c("feature1", "feature2", ...), states = c("E1", "E
 
 \item{color}{character vector of length 1 with the color to be used to color the heatmap. Default: "Tomato".}
 
-\item{label_size}{numeric of length 1 with the size of the likelihood labels to draw in the heatmap. Default: 2}
+\item{lh_size}{numeric of length 1 with the size of the likelihood labels to draw in the heatmap. Default: 2}
+
+\item{show_lh}{logical of length 1 indicating whether to show or not the likelihood to find a certain feature in a certain state.}
 }
 \description{
 This function allows to plot the heatmap of the emission states obtained by the chromHMM learnModel function.

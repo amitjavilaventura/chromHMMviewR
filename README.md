@@ -1,4 +1,4 @@
-# chromHMMviewR
+# chromHMMviewR <img src="logo.png" align="right" alt="" width="250" />
 
 `chromHMMviewR` is a package to visualize data from ChromHMM. 
 

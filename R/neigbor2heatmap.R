@@ -28,7 +28,9 @@ neighbor2hm <- function(data = NULL, states = NULL, title = "", subtitle = "", x
                         color = "Cornflowerblue", legend = F, score_size = 2, show_scores = T) {
 
   # PACKAGES
-  require(tidyverse)
+  require(dplyr)
+  require(ggplot2)
+  require(stringr)
   require(magrittr)
   require(reshape2)
   require(ggpubr)

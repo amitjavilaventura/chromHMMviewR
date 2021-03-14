@@ -22,12 +22,13 @@
 #' @param subtitle character vector of lenght 1 with the subtitle of the heatmap.
 #' @param xlab character vector of length 1 with the label to be shown in the x-axis of the heatmap. Default: "Features".
 #' @param color character vector of length 1 with the color to be used to color the heatmap. Default: "Tomato".
-#' @param label_size numeric of length 1 with the size of the likelihood labels to draw in the heatmap. Default: 2
+#' @param show_lh logical of length 1 indicating whether to show or not the likelihood to find a certain feature in a certain state.
+#' @param lh_size numeric of length 1 with the size of the likelihood labels to draw in the heatmap. Default: 2
 #'
 #' @export
 emission2hm <- function(data = NULL, features = NULL, states = NULL,
                         title = "", subtitle = "", xlab = "Features", color = "Tomato",
-                        label_size = 2){
+                        lh_size = 2, show_lh= T){
 
   # PACKAGES
   require(dplyr)
@@ -53,7 +54,6 @@ emission2hm <- function(data = NULL, features = NULL, states = NULL,
   g <- ggplot(df.m, aes(variable, State, fill = value)) + geom_tile(color = "gray", show.legend = F) +
     scale_fill_gradient(low = "White", high = color) +
     coord_equal() +
-    geom_text(mapping = aes(variable, State, label = round(value, 2)), size = label_size) +
     ggtitle(title, subtitle) + ylab("State") + xlab(xlab) +
     theme_pubr(border = T) +
     theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 1),
@@ -61,6 +61,10 @@ emission2hm <- function(data = NULL, features = NULL, states = NULL,
           axis.text = element_text(size = 10),
           plot.title = element_text(hjust=.5), plot.subtitle = element_text(hjust=.5))
 
+  if(show_lh) {
+    g <- g  +
+      geom_text(mapping = aes(variable, State, label = round(value, 2)), size = lh_size)
+  }
 
   # Return plot
   return(g)
