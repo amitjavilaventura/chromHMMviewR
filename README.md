@@ -25,7 +25,7 @@ If you want to contribute to this package, make a post in the issues section in 
 
 ## Cite
 
-If you use this package, please cite this repository and give it an star.
+If you use this package, please cite [this repository](https://github.com/amitjavilaventura/chromHMMviewR) and give it a star.
 
 ## More
 
