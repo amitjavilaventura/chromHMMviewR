@@ -4,7 +4,7 @@
 
 # emission2hm -----------------------------------
 
-#' @title emission2hm
+#' @title enrich2hm
 #' @author amitjavilaventura
 #'
 #' @description This function allows to plot the heatmap of the overlap enrichments in several genomic regions obtained by chromHMM.

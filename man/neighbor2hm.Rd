@@ -4,7 +4,7 @@
 \alias{neighbor2hm}
 \title{neigbor2hm}
 \usage{
-enrich2hm(data, regions = c("fregion1", "region2", ...), states = c("E1", "E2", ...), title = "Main title", subtitle = "Subtitle", color = "cornflowerblue", scale_color = "scale", legend = F, label_size =2)
+neigbor2hm(data, states = c("E1", "E2", ...), title = "Main title", subtitle = "Subtitle", color = "cornflowerblue", scale_color = "scale", legend = F, label_size =2)
 }
 \arguments{
 \item{data}{either a character vector with the file to be loaded or an object of class data.frame obtained by reading the input file with read.delim()}

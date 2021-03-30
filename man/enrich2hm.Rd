@@ -2,7 +2,7 @@
 % Please edit documentation in R/enrich2heatmap.R
 \name{enrich2hm}
 \alias{enrich2hm}
-\title{emission2hm}
+\title{enrich2hm}
 \usage{
 enrich2hm(data, regions = c("fregion1", "region2", ...), states = c("E1", "E2", ...), title = "Main title", subtitle = "Subtitle", color = "cornflowerblue", scale_color = "scale", legend = F, label_size =2)
 }

@@ -11,7 +11,7 @@
 #' @description This function takes the x_n_overlaps.txt file as input, where x is the contition specified in the ChromHMM design matrix and n is the number of states used in the learnModel function.
 #' @description Go to the chromHMM main page to get more information about chromHMM: http://compbio.mit.edu/ChromHMM/
 #'
-#' @usage enrich2hm(data, regions = c("fregion1", "region2", ...), states = c("E1", "E2", ...), title = "Main title", subtitle = "Subtitle", color = "cornflowerblue", scale_color = "scale", legend = F, label_size =2)
+#' @usage neigbor2hm(data, states = c("E1", "E2", ...), title = "Main title", subtitle = "Subtitle", color = "cornflowerblue", scale_color = "scale", legend = F, label_size =2)
 #'
 #' @param data either a character vector with the file to be loaded or an object of class data.frame obtained by reading the input file with read.delim()
 #' @param states a not-null haracter vector with the names of the states defined by crhomHMM. Initially should be set at paste("E", 1:n, sep=""), where n is the number of states defined in chromHMM.
