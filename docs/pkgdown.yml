@@ -1,6 +1,10 @@
 pandoc: 2.11.4
 pkgdown: 1.6.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2021-03-30T21:43Z
+articles:
+  01-emission2hm: 01-emission2hm.html
+  02-transition2hm: 02-transition2hm.html
+  03-overlap2hm: 03-overlap2hm.html
+  04-neighbor2hm: 04-neighbor2hm.html
+last_built: 2021-04-01T20:23Z
 

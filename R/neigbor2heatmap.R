@@ -25,7 +25,7 @@
 #'
 #' @export
 neighbor2hm <- function(data = NULL, states = NULL, title = "", subtitle = "", xlab = "Distance to TSS",
-                        color = "Cornflowerblue", legend = F, score_size = 2, show_scores = T) {
+                        color = "Cornflowerblue", legend = F, score_size = 2, show_score = F) {
 
   # PACKAGES
   require(dplyr)
@@ -63,10 +63,12 @@ neighbor2hm <- function(data = NULL, states = NULL, title = "", subtitle = "", x
     ggtitle(title, subtitle) + ylab("State") + xlab(xlab) +
     theme_pubr() + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 1),
                          axis.title = element_text(face = "bold", size = 12),
-                         axis.text = element_text(size = 10))
+                         axis.text = element_text(size = 10),
+                         plot.title= element_text(hjust = .5),
+                         plot.subtitle = element_text(hjust = .5))
 
 
-  if(show_scores) {
+  if(show_score) {
     g <- g +
       geom_text(mapping = aes(variable, State, label = round(value, 2)), size = score_size)
   }
