@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>transition2hm() • chromHMMviewR</title>
+<title>neighbor2hm() • chromHMMviewR</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="transition2hm()">
+<script src="../pkgdown.js"></script><meta property="og:title" content="neighbor2hm()">
 <meta property="og:description" content="chromHMMviewR">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -92,31 +92,31 @@
 
       
 
-      </header><script src="02-transition2hm_files/header-attrs-2.7/header-attrs.js"></script><div class="row">
+      </header><script src="04-neighbor2hm_files/header-attrs-2.7/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>transition2hm()</h1>
+      <h1 data-toc-skip>neighbor2hm()</h1>
                         <h4 class="author">Adrià Mitjavila Ventura</h4>
             
             <h4 class="date">01 April, 2021</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/amitjavilaventura/chromHMMviewR/blob/master/vignettes/02-transition2hm.Rmd"><code>vignettes/02-transition2hm.Rmd</code></a></small>
-      <div class="hidden name"><code>02-transition2hm.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/amitjavilaventura/chromHMMviewR/blob/master/vignettes/04-neighbor2hm.Rmd"><code>vignettes/04-neighbor2hm.Rmd</code></a></small>
+      <div class="hidden name"><code>04-neighbor2hm.Rmd</code></div>
 
     </div>
 
     
     
-<div id="default-transitions-from-chromhmm" class="section level1">
+<div id="default-overlap-from-chromhmm" class="section level1">
 <h1 class="hasAnchor">
-<a href="#default-transitions-from-chromhmm" class="anchor"></a>Default transitions from ChromHMM</h1>
+<a href="#default-overlap-from-chromhmm" class="anchor"></a>Default overlap from ChromHMM</h1>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"../demodata/transitions_8.png"</span><span class="op">)</span></code></pre></div>
-<p><img src="../demodata/transitions_8.png" width="151" style="display: block; margin: auto;"></p>
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"../demodata/conditionX_8_RefSeqTSS_neighborhood.png"</span><span class="op">)</span></code></pre></div>
+<p><img src="../demodata/conditionX_8_RefSeqTSS_neighborhood.png" width="331" style="display: block; margin: auto;"></p>
 </div>
-<div id="run-chromhmmviewr" class="section level1">
+<div id="run-chromhmmviewrneighbor2hm" class="section level1">
 <h1 class="hasAnchor">
-<a href="#run-chromhmmviewr" class="anchor"></a>Run <code>chromHMMviewR</code>
+<a href="#run-chromhmmviewrneighbor2hm" class="anchor"></a>Run <code>chromHMMviewR::neighbor2hm()</code>
 </h1>
 <div id="install-and-load" class="section level2">
 <h2 class="hasAnchor">
@@ -131,44 +131,51 @@
 <code class="sourceCode R"><span class="co"># load chromHMMviewR</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://amitjavilaventura.github.io/chromHMMviewR/index.html">chromHMMviewR</a></span><span class="op">)</span></code></pre></div>
 </div>
-<div id="read-and-explore-data" class="section level2">
+<div id="read-and-explore-the-data" class="section level2">
 <h2 class="hasAnchor">
-<a href="#read-and-explore-data" class="anchor"></a>Read and explore data</h2>
+<a href="#read-and-explore-the-data" class="anchor"></a>Read and explore the data</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># read emissions file from the demodata</span>
-<span class="va">transitions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.delim</a></span><span class="op">(</span><span class="st">"../demodata/transitions_8.txt"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="co"># read neighborhood file from the demodata</span>
+<span class="va">tss_neighbor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.delim</a></span><span class="op">(</span><span class="st">"../demodata/conditionX_8_RefSeqTSS_neighborhood.txt"</span><span class="op">)</span>
 
 <span class="co"># head</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">transitions</span><span class="op">)</span></code></pre></div>
-<pre><code>##   state..from.to...Emission.order.           X1           X2           X3
-## 1                                1 0.6237799631 5.969936e-02 1.444232e-01
-## 2                                2 0.0361653826 6.125980e-01 1.588527e-01
-## 3                                3 0.0667223477 1.305861e-01 7.980450e-01
-## 4                                4 0.0003346948 5.910215e-05 5.557259e-05
-## 5                                5 0.0000000000 3.388524e-02 1.394200e-03
-## 6                                6 0.0098823093 1.613592e-02 3.031194e-05
-##            X4          X5           X6           X7           X8
-## 1 0.014670208 0.000000000 0.1119489415 0.0374990405 0.0079792596
-## 2 0.001697886 0.083028122 0.1073994222 0.0002585049 0.0000000000
-## 3 0.001039399 0.002886479 0.0002521457 0.0004685915 0.0000000000
-## 4 0.963817428 0.001988460 0.0289758412 0.0039176834 0.0008512181
-## 5 0.022452888 0.822001613 0.1188773437 0.0013887126 0.0000000000
-## 6 0.120611407 0.044797589 0.7424068235 0.0585232267 0.0076124152</code></pre>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">tss_neighbor</span><span class="op">)</span></code></pre></div>
+<pre><code>##   State..Emission.order.  X.2000   X.1800   X.1600   X.1400   X.1200   X.1000
+## 1                      1 4.68205  5.66775  7.02308  9.24089 10.93848 14.62115
+## 2                      2 9.62928 12.94596 17.09522 21.17623 25.56435 28.20540
+## 3                      3 4.74970  5.46034  7.07016  9.91997 13.65447 19.92697
+## 4                      4 2.52862  2.37108  2.17270  1.94729  1.70008  1.41940
+## 5                      5 3.97564  4.32704  4.48207  4.63365  4.66810  4.61642
+## 6                      6 4.58853  4.72869  4.85287  4.87008  5.03730  5.18853
+##      X.800    X.600    X.400    X.200       X0     X200     X400     X600
+## 1 18.13953 26.27152 38.82544 60.14110 66.75348 47.91574 37.33321 31.21369
+## 2 31.13991 33.60353 32.52527 20.78724  9.67705 10.16159 12.81630 18.51470
+## 3 28.13560 36.40225 45.04597 54.18279 66.57550 77.11185 78.38811 72.64496
+## 4  1.14700  0.94985  0.86079  0.82885  0.82916  0.84083  0.87062  0.91914
+## 5  4.51996  4.02042  2.93177  1.99471  1.49862  1.40560  1.35048  1.27124
+## 6  4.92049  4.05000  2.90410  2.20697  1.75205  1.53811  1.51844  1.61557
+##       X800    X1000    X1200    X1400    X1600    X1800    X2000
+## 1 28.61254 26.87389 23.50610 18.35858 12.75928  8.13199  5.22966
+## 2 28.56710 41.10359 48.70602 46.35158 37.32285 25.91922 16.84954
+## 3 58.97599 39.94095 23.55269 13.48769  8.00559  5.03975  3.65473
+## 4  0.96797  1.02938  1.10432  1.22132  1.38899  1.60519  1.88465
+## 5  1.34359  1.57441  1.99471  2.70784  3.47610  4.24435  4.82313
+## 6  1.87500  2.32992  3.25082  4.61557  6.07992  7.18525  7.29836</code></pre>
 </div>
-<div id="call-transition2hm" class="section level2">
+<div id="call-neighbor2hm" class="section level2">
 <h2 class="hasAnchor">
-<a href="#call-transition2hm" class="anchor"></a>Call <code>transition2hm()</code>
+<a href="#call-neighbor2hm" class="anchor"></a>Call <code>neighbor2hm()</code>
 </h2>
-<div id="minimum" class="section level3">
+<div id="minimum-run" class="section level3">
 <h3 class="hasAnchor">
-<a href="#minimum" class="anchor"></a>Minimum</h3>
+<a href="#minimum-run" class="anchor"></a>Minimum run</h3>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># set the states with numbers</span>
 <span class="co"># states should be named later depending on the results</span>
 <span class="va">states</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"S"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">8</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># call transition2hm()</span>
-<span class="fu"><a href="../reference/transition2hm.html">transition2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">transitions</span>, states <span class="op">=</span> <span class="va">states</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="co"># call neighbor2hm()</span>
+<span class="fu"><a href="../reference/neighbor2hm.html">neighbor2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">tss_neighbor</span>, states <span class="op">=</span> <span class="va">states</span><span class="op">)</span></code></pre></div>
 <pre><code>## Loading required package: dplyr</code></pre>
 <pre><code>## 
 ## Attaching package: 'dplyr'</code></pre>
@@ -178,49 +185,54 @@
 <pre><code>## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## Loading required package: stringr</code></pre>
 <pre><code>## Loading required package: magrittr</code></pre>
 <pre><code>## Loading required package: reshape2</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
 <pre><code>## Loading required package: ggpubr</code></pre>
+<pre><code>## Loading required package: purrr</code></pre>
+<pre><code>## 
+## Attaching package: 'purrr'</code></pre>
+<pre><code>## The following object is masked from 'package:magrittr':
+## 
+##     set_names</code></pre>
 <pre><code>## Using State as id variables</code></pre>
-<p><img src="02-transition2hm_files/figure-html/unnamed-chunk-6-1.png" width="384" style="display: block; margin: auto;"></p>
+<p><img src="04-neighbor2hm_files/figure-html/unnamed-chunk-6-1.png" width="384" style="display: block; margin: auto;"></p>
 </div>
 <div id="from-a-file" class="section level3">
 <h3 class="hasAnchor">
 <a href="#from-a-file" class="anchor"></a>From a file</h3>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># call transition2hm()</span>
-<span class="fu"><a href="../reference/transition2hm.html">transition2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="st">"../demodata/transitions_8.txt"</span>, states <span class="op">=</span> <span class="va">states</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># call neighbor2hm()</span>
+<span class="fu"><a href="../reference/neighbor2hm.html">neighbor2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="st">"../demodata/conditionX_8_RefSeqTSS_neighborhood.txt"</span>, states <span class="op">=</span> <span class="va">states</span><span class="op">)</span></code></pre></div>
 <pre><code>## Using State as id variables</code></pre>
-<p><img src="02-transition2hm_files/figure-html/unnamed-chunk-7-1.png" width="384" style="display: block; margin: auto;"></p>
+<p><img src="04-neighbor2hm_files/figure-html/unnamed-chunk-7-1.png" width="384" style="display: block; margin: auto;"></p>
 </div>
 <div id="customize-the-output" class="section level3">
 <h3 class="hasAnchor">
 <a href="#customize-the-output" class="anchor"></a>Customize the output</h3>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># change title, subtitle, xlab and ylab</span>
-<span class="fu"><a href="../reference/transition2hm.html">transition2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">transitions</span>, states <span class="op">=</span> <span class="va">states</span>, 
-              title <span class="op">=</span> <span class="st">"This is a title"</span>, 
-              subtitle <span class="op">=</span> <span class="st">"This is a subtitle"</span>, 
-              xlab <span class="op">=</span> <span class="st">"This is the x-axis title"</span>,
-              ylab <span class="op">=</span> <span class="st">"This is the y-axis title"</span><span class="op">)</span></code></pre></div>
-<pre><code>## Using State as id variables</code></pre>
-<p><img src="02-transition2hm_files/figure-html/unnamed-chunk-8-1.png" width="384" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># change color of the heatmap: color = "gray30"</span>
-<span class="fu"><a href="../reference/transition2hm.html">transition2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">transitions</span>, states <span class="op">=</span> <span class="va">states</span>, color <span class="op">=</span> <span class="st">"gray30"</span><span class="op">)</span></code></pre></div>
-<pre><code>## Using State as id variables</code></pre>
-<p><img src="02-transition2hm_files/figure-html/unnamed-chunk-9-1.png" width="384" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># change the size of the likelihood labels (default: lh_size = 2)</span>
-<span class="fu"><a href="../reference/transition2hm.html">transition2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">transitions</span>, states <span class="op">=</span> <span class="va">states</span>, lh_size <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="co"># change title, subtitle and xlab</span>
+<span class="fu"><a href="../reference/neighbor2hm.html">neighbor2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">tss_neighbor</span>, states <span class="op">=</span> <span class="va">states</span>, 
+            title <span class="op">=</span> <span class="st">"This is a title"</span>, subtitle <span class="op">=</span> <span class="st">"This is a subtitle"</span>, 
+            xlab <span class="op">=</span> <span class="st">"This is the x-axis title"</span><span class="op">)</span></code></pre></div>
 <pre><code>## Using State as id variables</code></pre>
-<p><img src="02-transition2hm_files/figure-html/unnamed-chunk-10-1.png" width="384" style="display: block; margin: auto;"></p>
+<p><img src="04-neighbor2hm_files/figure-html/unnamed-chunk-8-1.png" width="384" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># without likelihood labels: show_lh = F</span>
-<span class="fu"><a href="../reference/transition2hm.html">transition2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">transitions</span>, states <span class="op">=</span> <span class="va">states</span>, show_lh <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="co"># change color of the heatmap: color = "gray30"</span>
+<span class="fu"><a href="../reference/neighbor2hm.html">neighbor2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">tss_neighbor</span>, states <span class="op">=</span> <span class="va">states</span>, color <span class="op">=</span> <span class="st">"gray30"</span><span class="op">)</span></code></pre></div>
 <pre><code>## Using State as id variables</code></pre>
-<p><img src="02-transition2hm_files/figure-html/unnamed-chunk-11-1.png" width="384" style="display: block; margin: auto;"></p>
+<p><img src="04-neighbor2hm_files/figure-html/unnamed-chunk-9-1.png" width="384" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># show the enrichment values in each cell</span>
+<span class="fu"><a href="../reference/neighbor2hm.html">neighbor2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">tss_neighbor</span>, states <span class="op">=</span> <span class="va">states</span>, show_score <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> </code></pre></div>
+<pre><code>## Using State as id variables</code></pre>
+<p><img src="04-neighbor2hm_files/figure-html/unnamed-chunk-10-1.png" width="384" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># change the size of the erichment values (default: score_size = 2)</span>
+<span class="fu"><a href="../reference/neighbor2hm.html">neighbor2hm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">tss_neighbor</span>, states <span class="op">=</span> <span class="va">states</span>, show_score <span class="op">=</span> <span class="cn">T</span>, score_size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<pre><code>## Using State as id variables</code></pre>
+<p><img src="04-neighbor2hm_files/figure-html/unnamed-chunk-11-1.png" width="384" style="display: block; margin: auto;"></p>
 </div>
 </div>
 </div>
